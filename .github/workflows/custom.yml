@@ -12,7 +12,7 @@ jobs:
       - name: Echo Something
         run: |
           echo "Hello, world! 1"
-          sleep 120
+          sleep 600
 
   job2:
     runs-on: ubuntu-latest
@@ -20,7 +20,7 @@ jobs:
       - name: Echo Something
         run: |
           echo "Hello, world! 2"
-          sleep 120
+          sleep 600
 
   job3:
     runs-on: ubuntu-latest
@@ -28,7 +28,7 @@ jobs:
       - name: Echo Something
         run: |
           echo "Hello, world! 3"
-          sleep 120
+          sleep 600
 
   job4:
     runs-on: ubuntu-latest
@@ -36,7 +36,7 @@ jobs:
       - name: Echo Something
         run: |
           echo "Hello, world! 4"
-          sleep 120
+          sleep 600
 
   job5:
     runs-on: ubuntu-latest
@@ -44,4 +44,4 @@ jobs:
       - name: Echo Something
         run: |
           echo "Hello, world! 5"
-          sleep 120
+          sleep 600
