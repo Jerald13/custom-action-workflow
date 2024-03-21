@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu
     steps:
       - uses: actions/checkout@v2
-      - uses: Jerald13/Custoom-Action@main
+      - uses: ./.github/workflows/unittest.yml
