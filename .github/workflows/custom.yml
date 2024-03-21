@@ -1,4 +1,4 @@
-name: Main Workflow
+name: Echo Workflow
 
 on:
   push:
@@ -6,50 +6,8 @@ on:
       - main
 
 jobs:
-  job1:
+  echo_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      - name: Run echo.yaml
-        run: echo "Calling echo.yaml 1 time(s)" && echo.yaml
-
-  job2:
-    runs-on: ubuntu-latest
-    needs: job1
-    if: always()
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      - name: Run echo.yaml
-        run: echo "Calling echo.yaml 2 time(s)" && echo.yaml
-
-  job3:
-    runs-on: ubuntu-latest
-    needs: job2
-    if: always()
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      - name: Run echo.yaml
-        run: echo "Calling echo.yaml 3 time(s)" && echo.yaml
-
-  job4:
-    runs-on: ubuntu-latest
-    needs: job3
-    if: always()
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      - name: Run echo.yaml
-        run: echo "Calling echo.yaml 4 time(s)" && echo.yaml
-
-  job5:
-    runs-on: ubuntu-latest
-    needs: job4
-    if: always()
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      - name: Run echo.yaml
-        run: echo "Calling echo.yaml 5 time(s)" && echo.yaml
+      - name: Echo Something
+        run: echo "Hello, world!"
