@@ -10,29 +10,38 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo Something
-        run: echo "Hello, world!"
+        run: |
+          echo "Hello, world! 1"
+          sleep 120
 
   job2:
     runs-on: ubuntu-latest
     steps:
       - name: Echo Something
-        run: echo "Hello, world! 2"
+        run: |
+          echo "Hello, world! 2"
+          sleep 120
 
   job3:
     runs-on: ubuntu-latest
     steps:
       - name: Echo Something
-        run: echo "Hello, world! 3"
+        run: |
+          echo "Hello, world! 3"
+          sleep 120
 
   job4:
     runs-on: ubuntu-latest
     steps:
       - name: Echo Something
-        run: echo "Hello, world! 4"
+        run: |
+          echo "Hello, world! 4"
+          sleep 120
 
   job5:
     runs-on: ubuntu-latest
     steps:
       - name: Echo Something
-        run: echo "Hello, world! 5"
-
+        run: |
+          echo "Hello, world! 5"
+          sleep 120
