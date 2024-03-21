@@ -6,8 +6,14 @@ on:
       - main
 
 jobs:
-  echo_job:
+  job1:
     runs-on: ubuntu-latest
     steps:
       - name: Echo Something
         run: echo "Hello, world!"
+
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Something
+        run: echo "Hello, world! 2"
