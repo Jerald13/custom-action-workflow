@@ -1,13 +1,55 @@
-name: Echo Workflow
-
+name: Main Workflow
+ 
+# Define workflow
 on:
   push:
     branches:
       - main
-
+ 
 jobs:
-  echo_job:
+  job1:
     runs-on: ubuntu-latest
+ 
     steps:
-      - name: Echo Something
-        run: echo "Hello, world!"
+      - name: Checkout code
+        uses: actions/checkout@v2
+ 
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+  job2:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+ 
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+ 
+  job3:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+ 
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+ 
+  job4:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+ 
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
