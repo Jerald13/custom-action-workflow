@@ -1,55 +1,65 @@
 name: Main Workflow
- 
+
 # Define workflow
 on:
   push:
     branches:
       - main
- 
+  workflow_dispatch:
+
 jobs:
   job1:
     runs-on: ubuntu-latest
- 
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
- 
+        uses: actions/checkout@v4
+
+      # Introduce a deliberate failure
+      - name: Simulate failure
+        run: exit 1
+
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '14'
+          node-version: '20'
+
+      - name: Delay
+        run: sleep 120
+ 
   job2:
     runs-on: ubuntu-latest
- 
+    needs: [job1]
+    if: ${{ always() && !cancelled() }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
- 
+        uses: actions/checkout@v4
+
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '14'
- 
+          node-version: '20'
+
   job3:
     runs-on: ubuntu-latest
- 
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
- 
+        uses: actions/checkout@v4
+
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '14'
- 
+          node-version: '20'
+
   job4:
     runs-on: ubuntu-latest
- 
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
- 
+        uses: actions/checkout@v4
+
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '14'
+          node-version: '20'
