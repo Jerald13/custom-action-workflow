@@ -1,47 +1,55 @@
-name: Echo Workflow
-
+name: Main Workflow
+ 
+# Define workflow
 on:
   push:
     branches:
       - main
-
+ 
 jobs:
   job1:
     runs-on: ubuntu-latest
+ 
     steps:
-      - name: Echo Something
-        run: |
-          echo "Hello, world! 1"
-          sleep 600
-
+      - name: Checkout code
+        uses: actions/checkout@v2
+ 
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
   job2:
     runs-on: ubuntu-latest
+ 
     steps:
-      - name: Echo Something
-        run: |
-          echo "Hello, world! 2"
-          sleep 600
-
+      - name: Checkout code
+        uses: actions/checkout@v2
+ 
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+ 
   job3:
     runs-on: ubuntu-latest
+ 
     steps:
-      - name: Echo Something
-        run: |
-          echo "Hello, world! 3"
-          sleep 600
-
+      - name: Checkout code
+        uses: actions/checkout@v2
+ 
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+ 
   job4:
     runs-on: ubuntu-latest
+ 
     steps:
-      - name: Echo Something
-        run: |
-          echo "Hello, world! 4"
-          sleep 600
-
-  job5:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Echo Something
-        run: |
-          echo "Hello, world! 5"
-          sleep 600
+      - name: Checkout code
+        uses: actions/checkout@v2
+ 
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
